@@ -1,182 +1,598 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <!-- Google analytics tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-STGLQW4BJX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-STGLQW4BJX');
+    </script>
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Title -->
+    <title>Yuhai - Wang</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1000">
 
-    <meta name="description" content="This is the Web page for Yuhai Wang">
-    <meta name="author" content="Yuhai Wang">
+    <!-- Isotope JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
 
-    <!-- This title will show up at the top of the browser window, not in the Web page itself -->
-    <title>Yuhai Wang, USC</title>
+    <!-- Custom Style -->
+    <link rel="stylesheet" href="style.css">
 
-    <!-- favicons: these show at the top of your browser tab, etc. Visit http://www.favicon-generator.org/ to generate your own favicons -->
-    <!-- <link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="favicons/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="favicons/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="favicons/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="favicons/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="favicons/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="favicons/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="favicons/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="favicons/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="favicons/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png"> -->
-    <!-- <link rel="manifest" href="favicons/manifest.json"> -->
-    <!-- <meta name="msapplication-TileColor" content="#ffffff"> -->
-    <!-- <meta name="msapplication-TileImage" content="/ms-icon-144x144.png"> -->
-    <meta name="theme-color" content="#ffffff">
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+    </style>
+  </head>
 
-    <!-- This is the jQuery plugin (necessary for Bootstrap's JavaScript plugins) -->
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <body id="body">
 
-   <!-- Include all compiled plugins (below), or include individual files as needed -->
-   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-
-    <!-- These are the includes for Bootstrap CSS and JS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-    <!-- This is the include for the Academicons fonts -->
-    <link rel="stylesheet" href="css/academicons.min.css"/>
-
-    <!-- This is the include for the FontAwesome fonts -->
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-
-    <!-- This is the include for your own personal style sheet -->
-    <link href="css/custom.css" rel="stylesheet">
-
-    <!-- favicons  -->
-    <!-- <link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="favicons/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="favicons/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="favicons/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="favicons/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="favicons/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="favicons/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="favicons/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="favicons/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicons//favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="favicons//favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicons//favicon-16x16.png"> -->
-
-
-</head>
-
-<body>
-
-   <!-- Fixed navbar -->
-      <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container">
-         <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-           <h1 id="brand-name"><a class="navbar-brand" href="index.html">Yuhai Wang</a></h1>
-         </div>
-         <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav pull-right">
-              <li id="about" class="active"><a href="index.html">About Me</a></li>
-                <li id="research"><a href="projects.html">Projects</a></li> 
-               <li id="teaching"><a href="resume.html">Resume</a></li> 
-
-
-
-            </ul>
-         </div> <!--/.nav-collapse -->
-        </div>
-      </nav>
-
-
-    <div class="container main-content">
-      <div class="row">
-         <div class="col-md-12">
-         <h2 class="page-header">About Me</h2>
-         </div>
-      </div> <!-- row -->
-        <div class="row">
-            <div class="col-md-4" style="margin-top: 50px">
-                <p></p><img class="thumbnail" src="img/yuhai1.png" alt="" height="441" width="295">
-                <table id="address" class="table">
-                    <tbody>
-                        <tr>
-                            <td style="width:45px"><i class="fa fa-home fa-lg" aria-hidden="true"></i></td>
-                            <td>Viterbi School of Engineering<br/> 
-University of Southern California<br/> Los Angeles, CA, 90089
-                            </td>
-                        </tr>
-
-                        <tr>
-                          <td><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></td>
-                          
-                          <td><a href="yuhaiwan@usc.edu">yuhaiwan@usc.edu</a></td>
-                          <!-- <td><a href="https://www.linkedin.com/in/yuhai-wang/">LinkedIn</a></td> -->
-                      </tr>
-
-                    </tbody>
-                </table>
-
-
+    <div id="main">
+      <div id="intro">
+        <div id="intro-text">
+          <h1>Yuhai Wang</h1>
+          <p>
+            I am a Master’s student at the University of Southern California (USC), working with Prof. <a href="https://danielseita.github.io/">Daniel Seita</a> in the <a href="https://slurm-lab-usc.github.io/">SLURM Lab</a> since September 29, 2023. Before joining USC, I was a Research Engineer at the <a href="https://air.tsinghua.edu.cn/en/">Institute of AI Industrial Research</a> (AIR), Tsinghua University, collaborating with Prof. <a href="https://air.tsinghua.edu.cn/en/info/1046/1196.htm">Guyue Zhou</a>. I earned my Bachelor’s degree from the School of Computer Science and Technology at Tiangong University (TGU), where I worked with Prof. <a href="https://www.researchgate.net/profile/Xuan-Xiao-9">Xuan Xiao</a>.
+            <div id="more-bio" style="display: None">
+              <br>
             </div>
-            <div class="col-md-8" style="margin-top: 50px">
-              <p><font size="4.5">Hello, my name is Yuhai Wang. I am a current Master of Science in Analytics student at the<a href="https://www.usc.edu/"> University of Southern California</a>. I completed my Bachelor of Science in Internet of Things Engineering at <a href="https://en.tiangong.edu.cn/main.htm"> Tiangong University</a> in China with a GPA of 3.7/4. During my undergraduate studies, I gained experience in programming languages such as Python, MATLAB, and C, as well as cloud computing, database principles, and applications.</p>
-
-<p><font size="4.5">In 2022, I have worked as a research engineer at <a href="https://air.tsinghua.edu.cn/en/">Institute for AI Industry Research (AIR)</a> of <a href="https://www.tsinghua.edu.cn/en/">Tsinghua University</a>. In this role, I utilized various programming languages to complete robotics-related tasks, including gait planning of a biped robot, solving the inverse kinematics of robotic arms, and integrating motor and vision systems of a robot arm by using ROS in the Linux environment. I also contributed to the development of the simulator and competition system for RoboMaster University Sim2Real Challenge at <a href="https://www.icra2022.org/"> IEEE ICRA 2022</a>, resulting in a successful competition.</p>
-
-<p><font size="4.5">In 2021, As a team leader at Tianjin Key Laboratory of Autonomous Intelligence Technology and Systems, I designed a novel transformable mechanism based on four-bar linkage and calculated the robot's kinematics and inverse kinematics. I created a simulation robot model using Webots and implemented movement functions via C to simulate two different movements of the robot. I also assembled <a href="https://www.bilibili.com/video/BV1w84y1F73T/?spm_id_from=333.999.0.0&vd_source=c3c945f53a04b07f63d2fef04decd5a2">a robot prototype</a> with 3D printing components and customized parts and developed controlling programs using MATLAB. And also published a paper <a href="https://ieeexplore.ieee.org/document/9561128">Lywal: a Leg-Wheel Transformable Quadruped Robot with Picking up and Transport Functions, 2021 IEEE International Conference on Robotics and Automation (ICRA), 2021. (Xue Yongjiang, Yuan Xichen, Wang Yuhai et al.)
-</a></p>
-</div>
-
-           <p>
-</p>
-
-
-            </div>
-</div>
-        
+          <!-- Add a blanked line -->
+          <br>
+          <!--  -->
+            <p>
+              <b>I am seeking PhD opportunities for Spring or Fall 2024.</b> My research interests lie at the intersection of robotics, computer vision, and machine learning. I am currently focused on developing algorithms, such as Whole-Body Control (WBC), to enable robots to perceive, maintain balance, and operate effectively in dynamic environments.
+            </p>
+            <br> 
+            <a href="https://github.com/YuhaiW">Github</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://scholar.google.com/citations?user=9-5_chEAAAAJ&hl=en">G. Scholar</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://www.linkedin.com/in/yuhai-wang/">LinkedIn</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <!-- linke for my cv -->
+            <a href="data/CV.pdf">C. Vitae</a>
+            <br><br>
+            Email: yuhaiwan at usc dot edu
+            <br><br>
+          </p>
         </div>
-        <!-- .row -->
+        <div id="intro-image">
+          <img src="images/yuhai1.JPG">
+        </div>
+      </div>
+
+      <div id="filters" class="button-group">
+        <!-- <button class="button" data-filter="*">Show All</button> -->
+        <button class="button is-checked" data-filter=".highlight">Highlights</button>
+        <button class="button" data-filter=".publication">Research</button>
+        <!-- <button class="button" data-filter=".talk">Talks</button> -->
+        <button class="button" data-filter=".misc">Misc</button>
+      </div>
+
+      <div class="grid">
+
+        <!-- Highlights -->
+        <div class="list-item highlight description" data-category="highlight">
+          Some highlights from our research:
+        </div>
+
+        <!-- Preview Videos -->
+        <div class="list-item highlight previews" data-category="highlight">
+
+          <a href="https://sope-dex.github.io/"><video class="preview1" playsinline="" muted="" autoplay="" loop=""><source src="images/sope.mp4" type="video/mp4"></video></a>
+
+          <!-- <a href="https://say-can.github.io/"><video class="preview2" playsinline="" muted="" autoplay="" loop=""><source src="images/D_NeRF.png" type="images"></img></a> -->
+          <!-- give me a image version -->
+           <a href="https://arxiv.org/pdf/2405.02880"><img class="preview2" src="images/D_NeRF.png" alt="" /></a>
+
+          <a href="https://www.bilibili.com/video/BV1LR4y1x7ad/?share_source=copy_web&vd_source=2c879f5913e2fbe6442452d52f4bcfbd"><video class="preview3" playsinline="" muted="" autoplay="" loop=""><source src="images/arx5.mp4" type="video/mp4"></video></a>
+          <a href="https://youtu.be/mtlygIGOYEE?si=TPYx5fIN0VZOfyHA"><video class="preview4" playsinline="" muted="" autoplay="" loop=""><source src="images/Lywal.mp4" type="video/mp4"></video></a>
+
+        </div>
+
+        <!-- Truncated Set of Highlights (Shown by Default) -->
+        <!-- <div id="main-highlights">
+
+          <div class="list-item highlight" data-category="highlight">
+            <b>CoRL</b> <a href="https://robot-help.github.io/">Best Student Paper Award</a>
+          </div>
+
+          <div class="list-item highlight" data-category="highlight">
+            <b>ICRA</b> <a href="https://code-as-policies.github.io/">Outstanding Learning Paper Award</a>
+          </div>
+
+          <div class="list-item highlight" data-category="highlight">
+            <b>Google AI</b> blog post <a href="https://ai.googleblog.com/2022/11/robots-that-write-their-own-code.html">"Robots That Write Their Own Code"</a>
+          </div>
+
+          <div class="list-item highlight" data-category="highlight">
+            <b>AXIOS</b> article <a href="https://www.axios.com/2022/11/03/google-artificial-intelligence">"Unleash All This Creativity: Google AI's Breathtaking Potential"</a>
+          </div>
+
+          <div class="list-item highlight" data-category="highlight">
+            <b>CNET</b> video <a href="https://www.youtube.com/watch?v=dCPHGwW9SOk">"Google’s Most Advanced Robot Brain Just Got a Body"</a>
+          </div>
+
+          <div class="list-item highlight" data-category="highlight">
+             <b>T-RO</b> Transactions on Robotics <a href="https://www.ieee-ras.org/publications/t-ro">Best Paper Award</a>
+          </div>
+
+          <div class="list-item highlight" data-category="highlight">
+            <b>New York Times</b> article <a href="http://andyzeng.github.io/images/nytimes-business-newspaper-tossingbot.png">"A New Lab Full of Fast Learners"</a>
+          </div>
+
+        </div> -->
+
+        <!-- All Archived Highlights (Click to Show) -->
+        <!-- <div id="more-highlights" style="display: None">
+
+          <div class="list-item highlight" data-category="highlight">
+            <p class="date">2023</p>Conference on Robot Learning (CoRL) <a href="https://robot-help.github.io/">Best Student Paper Award</a>
+          </div>
+
+          <div class="list-item highlight" data-category="highlight">
+            <p class="date"></p>Robotics: Science and Systems (RSS) <a href="https://roboticsconference.org/program/papers/024/">Best Demo Paper Award Finalist</a>
+          </div>
+
+          <div class="list-item highlight" data-category="highlight">
+            <p class="date"></p>Google AI blog post <a href="https://ai.googleblog.com/2023/07/modular-visual-question-answering-via.html">"Modular Visual Question Answering via Code Generation"</a>
+          </div>
+
+          <div class="list-item highlight" data-category="highlight">
+            <p class="date"></p>IEEE International Conference on Robotics and Automation (ICRA) <a href="https://code-as-policies.github.io/">Outstanding Learning Paper Award</a>
+          </div>
+
+          <div class="list-item highlight" data-category="highlight">
+            <p class="date"></p>Google AI blog post <a href="https://ai.googleblog.com/2023/03/visual-language-maps-for-robot.html">"Visual Language Maps for Robot Navigation"</a>
+          </div>
+
+          <div class="list-item highlight" data-category="highlight">
+            <p class="date"></p>Google Research <a href="https://palm-e.github.io/">PaLM-E</a> debut - <a href="https://ai.googleblog.com/2023/03/palm-e-embodied-multimodal-language.html">"An Embodied Multimodal Language Model"</a> (20+ <a href="https://www.youtube.com/watch?v=2BYC4_MMs8I">derived YouTube videos</a>)
+          </div>
+
+          <div class="list-item highlight" data-category="highlight">
+            <p class="date"></p>Google AI blog post <a href="https://ai.googleblog.com/2023/03/palm-e-embodied-multimodal-language.html">"PaLM-E: An Embodied Multimodal Language Model"</a>
+          </div>
+
+          <div class="list-item highlight" data-category="highlight">
+            <p class="date">2022</p>Conference on Robot Learning (CoRL) <a href="https://corl2022.org/awards/">Special Innovation Award</a>
+          </div>
+
+          <div class="list-item highlight" data-category="highlight">
+            <p class="date"></p>Google AI blog post <a href="https://ai.googleblog.com/2022/11/robots-that-write-their-own-code.html">"Robots That Write Their Own Code"</a>
+          </div>
+
+          <div class="list-item highlight" data-category="highlight">
+            <p class="date"></p>Google AI@ Event <a href="https://code-as-policies.github.io/">Code as Policies</a> debut - <a href="https://www.axios.com/2022/11/03/google-artificial-intelligence">AXIOS</a>, <a href="https://techcrunch.com/2022/11/02/google-wants-robots-to-generate-their-own-code/">TechCrunch</a>, <a href="https://www.zdnet.com/article/google-wants-robots-to-write-their-own-python-code/">ZDNet</a> (60+ articles)
+          </div>
+
+          <div class="list-item highlight" data-category="highlight">
+            <p class="date"></p>CNET video <a href="https://www.youtube.com/watch?v=dCPHGwW9SOk">"Google’s Most Advanced Robot Brain Just Got a Body"</a>
+          </div>
+
+          <div class="list-item highlight" data-category="highlight">
+            <p class="date"></p>Google Research <a href="https://sites.research.google/palm-saycan">PaLM-SayCan</a> debut - <a href="https://www.wired.com/story/google-robot-learned-to-take-orders-by-scraping-the-web/">Wired</a>, <a href="https://www.washingtonpost.com/video/technology/google-is-training-robots-to-perform-complex-tasks/2022/08/16/3339cdbb-344b-482f-8671-33022725df81_video.html">Washington Post</a>, <a href="https://www.theverge.com/2022/8/16/23307730/google-everyday-robots-project-ai-language-skills-palm-saycan">The Verge</a> (260+ articles)
+          </div>
+
+          <div class="list-item highlight" data-category="highlight">
+            <p class="date"></p>Google AI blog post <a href="https://ai.googleblog.com/2022/02/robot-see-robot-do.html">"Robot See, Robot Do"</a>
+          </div>
+
+          <div class="list-item highlight" data-category="highlight">
+            <p class="date"></p>Princeton News article <a href="https://engineering.princeton.edu/news/2022/01/25/picking-trash-robots-pick-new-approaches-work">"In Picking Up Trash, Robots Pick Up New Approaches to Work"</a>
+          </div>
+
+          <div class="list-item highlight" data-category="highlight">
+            <p class="date">2021</p>Google AI blog post <a href="https://ai.googleblog.com/2021/11/decisiveness-in-imitation-learning-for.html">"Decisiveness in Imitation Learning for Robots"</a>
+          </div>
+
+          <div class="list-item highlight" data-category="highlight">
+            <p class="date"></p>Conference on Robot Learning (CoRL) <a href="https://x-irl.github.io/">Best Paper Award Finalist</a>
+          </div>
+
+          <div class="list-item highlight" data-category="highlight">
+            <p class="date"></p>Google AI blog post <a href="https://ai.googleblog.com/2021/05/learning-to-manipulate-deformable.html">"Learning to Manipulate Deformable Objects"</a>
+          </div>
+
+          <div class="list-item highlight" data-category="highlight">
+            <p class="date"></p>Japan Factory Automation (FA) <a href="https://www.tandfonline.com/doi/full/10.1080/01691864.2019.1698463">Foundation Paper Award</a>
+          </div>
+
+          <div class="list-item highlight" data-category="highlight">
+            <p class="date"></p>Google AI blog post <a href="https://ai.googleblog.com/2021/02/rearranging-visual-world.html">"Rearranging the Visual World"</a>
+          </div>
+
+          <div class="list-item highlight" data-category="highlight">
+            <p class="date">2020</p>IEEE Transactions on Robotics (T-RO) <a href="https://www.ieee-ras.org/publications/t-ro">Best Paper Award</a>
+          </div>
+
+          <div class="list-item highlight" data-category="highlight">
+            <p class="date"></p>Conference on Robot Learning (CoRL) <a href="https://transporternets.github.io/">Best Paper Presentation Award Finalist</a>
+          </div>
+
+          <div class="list-item highlight" data-category="highlight">
+            <p class="date"></p>Google AI blog post <a href="https://ai.googleblog.com/2020/03/visual-transfer-learning-for-robotic.html">"Visual Transfer Learning for Robotic Manipulation"</a>
+          </div>
+
+          <div class="list-item highlight" data-category="highlight">
+            <p class="date"></p>IEEE International Conference on Robotics and Automation (ICRA) <a href="https://form2fit.github.io/">Best Paper in Automation Award Finalist</a>
+          </div>
+
+          <div class="list-item highlight" data-category="highlight">
+            <p class="date"></p>Google AI blog post <a href="https://ai.googleblog.com/2020/02/learning-to-see-transparent-objects.html">"Learning to See Transparent Objects"</a>
+          </div>
+
+          <div class="list-item highlight" data-category="highlight">
+            <p class="date">2019</p>New York Times article <a href="http://andyzeng.github.io/images/nytimes-business-newspaper-tossingbot.png">"A New Lab Full of Fast Learners"</a> (100+ articles)
+          </div>
+
+          <div class="list-item highlight" data-category="highlight">
+            <p class="date"></p>Google AI blog post <a href="https://ai.googleblog.com/2019/10/learning-to-assemble-and-to-generalize.html">"Learning to Assemble and to Generalize"</a>
+          </div>
+
+          <div class="list-item highlight" data-category="highlight">
+            <p class="date"></p>Robotics: Science and Systems (RSS) <a href="https://tossingbot.cs.princeton.edu/">Best System Paper Award</a>
+          </div>
+
+          <div class="list-item highlight" data-category="highlight">
+            <p class="date"></p>Google AI blog post <a href="https://ai.googleblog.com/2019/03/unifying-physics-and-deep-learning-with.html">"Unifying Physics and Deep Learning with TossingBot"</a>
+          </div>
+
+          <div class="list-item highlight" data-category="highlight">
+            <p class="date">2018</p>Honored to be a recipient of the Princeton SEAS Award for Excellence
+          </div>
+
+          <div class="list-item highlight" data-category="highlight">
+            <p class="date"></p>IEEE International Conference on Intelligent Robots and Systems (IROS) <a href="http://vpg.cs.princeton.edu/">Best Cognitive Paper Award Finalist</a>
+          </div>
+
+          <div class="list-item highlight" data-category="highlight">
+            <p class="date"></p>Amazon Robotics <a href="http://arc.cs.princeton.edu">Best System Paper Award</a>
+          </div>
+
+          <div class="list-item highlight" data-category="highlight">
+            <p class="date"></p>Honored to be a recipient of the <a href="https://blogs.nvidia.com/blog/2018/04/04/nvidia-graduate-fellowship-program/">NVIDIA Fellowship</a>
+          </div>
+
+          <div class="list-item highlight" data-category="highlight">
+            <p class="date"></p>MIT News article <a href="https://news.mit.edu/2018/robo-picker-grasps-and-packs-0220">"Robo-Picker Grasps and Packs"</a>
+          </div>
+
+          <div class="list-item highlight" data-category="highlight">
+            <p class="date">2017</p>1st place winners (stow) at the worldwide <a href="https://www.amazonrobotics.com/">Amazon Picking Challenge</a> 2017 with <a href="https://arc.cs.princeton.edu/">Team MIT-Princeton</a>
+          </div>
+
+          <div class="list-item highlight" data-category="highlight">
+            <p class="date">2016</p>3rd place winners at the worldwide <a href="https://www.amazonrobotics.com/">Amazon Picking Challenge</a> 2016 with <a href="https://arc.cs.princeton.edu/">Team MIT-Princeton</a>
+          </div>
+
+          <div class="list-item highlight" data-category="highlight">
+            <p class="date">2015</p>Honored to be a recipient of the <a href="http://giving.princeton.edu/scholarships-fellowships/fellowships/endowed2">Gordon Y.S. Wu Fellowship in Engineering and Wu Prize</a>
+          </div>
+
+        </div> -->
+
+        <!-- Toggle highlights button. -->
+        <!-- <div class="list-item highlight toggle-button" data-category="highlight">
+          <a id="toggle_highlights_button" href="javascript:toggle_highlights()">Show more</a>
+        </div> -->
+
+
+
+
+        <!-- Publications -->
+        <div class="list-item publication" data-category="publication">
+          <a href="https://sope-dex.github.io/" class="thumbnail">
+            <video playsinline="" muted="" autoplay="" loop="" width="180px">
+              <source src="images/sope.mp4" type="video/mp4">
+            </video>
+          </a>
+          <div class="project-description">
+            <h3><a href="https://robot-teaching.github.io/">Learning to Singulate Objects in Packed Environments using a Dexterous Hand</a></h3>
+            <p>
+              Hao Jiang,  Yuhai Wang,  Hanyang Zhou,  Daniel Seita <br>
+              <i>International Symposium of Robotics Research (ISRR), 2024</i><br>
+                <!-- <i>Conference on Robot Learning (CoRL) 2023</i><br> -->
+                <a href="https://sope-dex.github.io/">Webpage</a>&nbsp;&nbsp;&bull;&nbsp;&nbsp;
+                <a href="https://arxiv.org/abs/2409.00643">PDF</a>&nbsp;&nbsp;&bull;&nbsp;&nbsp;
+                <a href="https://github.com/Msornerrrr/sope-dex">Code</a>
+                <br> <!-- TODO: extra spaces until I figure out the margin bug. -->
+            </p>
+          </div>
+        </div>
+
+        <div class="list-item publication" data-category="publication">
+          <a href="https://arxiv.org/pdf/2405.02880" class="thumbnail">
+            <img src="images/D_NeRF.png" alt="" />
+          </a>
+          <div class="project-description">
+            <h3><a href="https://arxiv.org/pdf/2405.02880">Blending Distributed NeRFs with Tri-stage Robust Pose Optimization</a></h3>
+            <p>
+              Ye, Baijun; Liu, Caiyun; Ye, Xiaoyu; Chen, Yuantao; Wang, Yuhai; Yan, Zike; Shi, Yongliang; Zhao, Hao; Zhou, Guyue<br>
+              <i>International Conference on Intelligent Robots and Systems (IROS), 2024</i><br>
+                <!-- <i>Conference on Robot Learning (CoRL) 2023</i><br> -->
+                <!-- <a href="https://video-language-planning.github.io/">Webpage</a>&nbsp;&nbsp;&bull;&nbsp;&nbsp; -->
+                <a href="https://arxiv.org/pdf/2405.02880">PDF</a>
+                <br> <!-- TODO: extra spaces until I figure out the margin bug. -->
+            </p>
+          </div>
+        </div>
+
+        <div class="list-item publication" data-category="publication">
+          <a href="https://youtu.be/mtlygIGOYEE?si=TPYx5fIN0VZOfyHA" class="thumbnail">
+            <video playsinline="" muted="" autoplay="" loop="" width="180px">
+              <source src="images/Lywal.mp4" type="video/mp4">
+            </video>
+          </a>
+          <div class="project-description">
+            <h3><a href="https://ieeexplore.ieee.org/document/9561128">Lywal: A Leg-Wheel Transformable Quadruped Robot with Picking Up and Transport Functions</a></h3>
+            <p>
+              Xue, Yongjiang; Yuan, Xichen; Wang, Yuhai; Yang, Yang; Lu, Siyu; Zhang, Bo; Lai, Juezhu; Wang, Jianming; Xiao, Xuan<br>
+                <i>International Conference on Robotics and Automation (ICRA), 2021</i><br>
+                <a href="https://youtu.be/mtlygIGOYEE?si=TPYx5fIN0VZOfyHA">Video</a>&nbsp;&nbsp;&bull;&nbsp;&nbsp;
+                <a href="https://ieeexplore.ieee.org/document/9561128">PDF</a>
+                <br> <!-- TODO: extra spaces until I figure out the margin bug. -->
+            </p>
+          </div>
+        </div>
+
+        <!-- Talks -->
+        <!-- <div class="list-item talk description" data-category="talk">
+          Some of my slides can be found <a href="https://slides.com/andyzeng">here</a>
+        </div> -->
+
+        <div class="list-item talk" data-category="talk">
+          <p class="date">2024</p>UIUC <a href="https://publish.illinois.edu/csl-student-conference-2024">CSL Student Conference</a>
+        </div>
+
+        <div class="list-item talk" data-category="talk">
+          <p class="date">2023</p>EMNLP Workshop on <a href="https://splu-robonlp-2023.github.io/">RoboNLP</a>
+        </div>
+
+        <div class="list-item talk" data-category="talk">
+          <p class="date"></p>Cornell <a href="https://www.cs.cornell.edu/content/fall-2023-robotics-seminar">Robotics Seminar</a>
+        </div>
+
+        <div class="list-item talk" data-category="talk">
+          <p class="date"></p>MILA <a href="https://www.youtube.com/@MontrealRobotics">Robot Learning Seminar</a>
+        </div>
+
+        <div class="list-item talk" data-category="talk">
+          <p class="date"></p>UPenn <a href="https://www.grasp.upenn.edu/events/month/">GRASP SFI Seminar</a>
+        </div>
+
+        <div class="list-item talk" data-category="talk">
+          <p class="date"></p>RSS Workshop on <a href="https://sites.google.com/view/rss23-sym">Symmetries in Robot Learning</a> (<a href="https://youtu.be/E2l16T0biu4?t=8514">video</a>)
+        </div>
+
+        <div class="list-item talk" data-category="talk">
+          <p class="date"></p>RSS Workshop on <a href="https://ai-workshops.github.io/interdisciplinary-exploration-of-gmpl/">Generalizable Manipulation Policy Learning: Paradigms and Debates</a>
+        </div>
+
+        <div class="list-item talk" data-category="talk">
+          <p class="date"></p>CVPR Workshop on <a href="https://scene-understanding.com/">3D Scene Understanding for Vision, Graphics, and Robotics</a>
+        </div>
+
+        <div class="list-item talk" data-category="talk">
+          <p class="date"></p>ICRA Workshop on <a href="https://sites.google.com/view/icra2023embracingcontacts/home">Embracing Contact: Making Robots Physically Interact with our World</a>
+        </div>
+
+        <div class="list-item talk" data-category="talk">
+          <p class="date"></p>ICRA Round-Table Discussion with Science Robotics
+        </div>
+
+        <div class="list-item talk" data-category="talk">
+          <p class="date"></p>ICRA Workshop on <a href="https://life-long-learning-with-human-help-l3h2.github.io/">Life-Long Learning with Human Help</a>
+        </div>
+
+        <div class="list-item talk" data-category="talk">
+          <p class="date"></p>Panel on Northwestern <a href="https://robotics.northwestern.edu/grand-challenges/">Grand Challenges in Robotics</a> (<a href="https://www.youtube.com/watch?v=Vj50Z7az3TY">video</a>)
+        </div>
+
+        <div class="list-item talk" data-category="talk">
+          <p class="date"></p>Guest Lecture at Columbia <a href="https://robotics.columbia.edu/content/courses">COMS 4733: Computational Aspects of Robotics</a>
+        </div>
+
+        <div class="list-item talk" data-category="talk">
+          <p class="date"></p>Stanford <a href="https://svl.stanford.edu/">Vision and Learning Lab</a>
+        </div>
+
+        <div class="list-item talk" data-category="talk">
+          <p class="date">2022</p>CoRL Workshop on <a href="https://sites.google.com/view/langrob-corl22/">Language and Robot Learning</a> (<a href="https://www.youtube.com/watch?v=XQco1A6-RNI&t=18702s">video</a>)
+        </div>
+
+        <div class="list-item talk" data-category="talk">
+          <p class="date"></p>NeurIPS Workshop on <a href="http://www.robot-learning.ml/2022/">Robot Learning</a> (<a href="https://youtu.be/nxFwcfEp0II">video</a>)
+        </div>
+
+        <div class="list-item talk" data-category="talk">
+          <p class="date"></p>NeurIPS Workshop on <a href="https://aihabitat.org/challenge/2022_rearrange/">Habitat Rearrangement Challenge</a>
+        </div>
+
+        <div class="list-item talk" data-category="talk">
+          <p class="date"></p>Guest Lecture at Columbia <a href="https://www.coursicle.com/columbia/courses/IEOR/E6617/">IEOR E6617: Machine Learning and High-Dimensional Data</a>
+        </div>
+
+        <div class="list-item talk" data-category="talk">
+          <p class="date"></p>Princeton <a href="https://robo.princeton.edu/seminar">Robotics Seminar</a>
+        </div>
+
+        <div class="list-item talk" data-category="talk">
+          <p class="date"></p>RSS Workshop on <a href="https://imrss2022.github.io/">Implicit Representations</a> (<a href="https://youtu.be/ZIjNF39QKCI?list=PLfF8jFeyEb59OwSqCZM2RuW6VhPPFvK0s">video</a>)
+        </div>
+
+        <div class="list-item talk" data-category="talk">
+          <p class="date"></p>CVPR Tutorial on <a href="https://sites.google.com/view/cvpr2022-robot-learning/">Vision-Based Robot Learning</a>
+        </div>
+
+        <div class="list-item talk" data-category="talk">
+          <p class="date"></p>MIT <a href="https://ei.csail.mit.edu/csl.html">CSL Seminar</a> (<a href="https://youtu.be/QX47jTL5XUM">video</a>)
+        </div>
+
+        <div class="list-item talk" data-category="talk">
+          <p class="date"></p>Guest Lecture at Columbia <a href="https://sites.google.com/view/spring2022-coms4733/home">COMS 4733: Computational Aspects of Robotics</a>
+        </div>
+
+        <div class="list-item talk" data-category="talk">
+          <p class="date">2021</p>CVPR Workshop on <a href="https://sites.google.com/view/cvpr2021-3d-vision-robotics">3D Vision and Robotics</a>
+        </div>
+
+        <div class="list-item talk" data-category="talk">
+          <p class="date"></p>Guest Lecture at <a href="http://michaelryoo.com/course/cse525/">Stony Brook University CSE525: Introduction to Robotics</a>
+        </div>
+
+        <div class="list-item talk" data-category="talk">
+          <p class="date"></p>Guest Lecture at <a href="https://www.coursicle.com/nyu/courses/CSCIUA/74/">NYU CSCI-UA 74: Big Ideas in Artificial Intelligence</a>
+        </div>
+
+        <div class="list-item talk" data-category="talk">
+          <p class="date">2020</p>RSS Workshop on <a href="https://www.brainlinks-braintools.uni-freiburg.de/rss-2020-workshop/">Self-Supervised Robot Learning</a>
+        </div>
+
+        <div class="list-item talk" data-category="talk">
+          <p class="date"></p>RSS Workshop on <a href="https://sites.google.com/stanford.edu/roboticsretrospectives/home">Robotics Retrospectives</a> (<a href="https://www.youtube.com/watch?v=rjMmsIN7B0A">video</a>)
+        </div>
+
+        <div class="list-item talk" data-category="talk">
+          <p class="date">2019</p>Amazon Research <a href="https://www.amazon.jobs/pt/teams/amazon-robotics">Robotics Symposium</a>
+        </div>
+
+        <div class="list-item talk" data-category="talk">
+          <p class="date">2018</p>RE·WORK <a href="https://blog.re-work.co/deep-learning-for-robotics-ai-industrial-automation-summit-highlights/">Deep Learning for Robotics Summit</a>
+        </div>
+
+        <div class="list-item talk" data-category="talk">
+          <p class="date"></p>Guest Lecture at NCTU Robotics Seminar: Robotic Manipulation
+        </div>
+
+
+
+
+        <!-- Services -->
+        <div class="list-item misc" data-category="misc">
+          <p class="date">2024</p>ISE 534: <a href="https://catalogue.usc.edu/preview_course_nopop.php?catoid=14&coid=222599">Data Analytics Consulting</a>, USC, Graduate Teaching Assistant
+        </div>
+
+        <div class="list-item misc" data-category="misc">
+          <p class="date"></p>Agile Robotics <a href="https://agile-robotics-workshop.github.io/icra2024/">Workshop</a>@ICRA 2024, Reviewer
+        </div>
+
+        <div class="list-item misc" data-category="misc">
+          <p class="date">Prior</p>President's Scholarship, TGU
+        </div>
+        <div class="list-item misc" data-category="misc">
+          <p class="date"></p>Social Activities Scholarship, TGU
+        </div>
+        <div class="list-item misc" data-category="misc">
+          <p class="date"></p>Outstanding Student Leader Award, TGU
+        </div>
+        <div class="list-item misc" data-category="misc">
+          <p class="date"></p>Off-campus competition scholarship, TGU
+        </div>
+        <div class="list-item misc" data-category="misc">
+          <p class="date"></p>First Prize in the National Challenge Cup Competition
+        </div>
+        <div class="list-item misc" data-category="misc">
+          <p class="date"></p>Honorable Mention of the Mathematical Contest in Modeling
+        </div>
+        <div class="list-item misc" data-category="misc">
+          <p class="date"></p>School of Computer Science and Technology, Tiangong University, Academic Representative
+        </div>
+
+
+
+      </div>
+
+      <div id="footer">Inspired by <a href="https://jonbarron.info/">Jon's website</a>.</div>
 
     </div>
-    <!-- .container -->
 
-    <footer class="container">
-        <div class="row">
+    <script>
 
-            <div class="col-xs-12 col-sm-8">
-                <p class="pull-left spacer-top" >&copy; <script>new Date().getFullYear()>2010&&document.write(new Date().getFullYear());</script> Yuhai Wang</p>
-            </div>
+      // Isotope grid.
+      var $grid = $('.grid').isotope({
+        itemSelector: '.list-item',
+        layoutMode: 'fitRows',
+        transitionDuration: 0,
+        stagger: 10,
+        initLayout: false,
+        getSortData: {
+          name: '.name',
+          symbol: '.symbol',
+          number: '.number parseInt',
+          category: '[data-category]',
+          weight: function( itemElem ) {
+            var weight = $( itemElem ).find('.weight').text();
+            return parseFloat( weight.replace( /[\(\)]/g, '') );
+          }
+        }
+      });
 
-            <!-- academic icons: For more icons, please see https://jpswalsh.github.io/academicons/ -->
-            <div class="col-xs-12 col-sm-3 social-icons pull-right">
+      // Bind filter button click.
+      $('#filters').on( 'click', 'button', function() {
+        var filterValue = $( this ).attr('data-filter');
+        localStorage.setItem('filterValue', filterValue);
+        $grid.isotope({ filter: filterValue });
+      });
 
+      // Change is-checked class on buttons.
+      $('.button-group').each( function( i, buttonGroup ) {
+        var $buttonGroup = $( buttonGroup );
+        $buttonGroup.on( 'click', 'button', function() {
+          $buttonGroup.find('.is-checked').removeClass('is-checked');
+          $( this ).addClass('is-checked');
+        });
+      });
 
-               <!-- Visit Researchgate.net to set up an account -->
-               <!-- <a class="btn btn-primary btn-lg" href="https://www.researchgate.net/profile/Renyuan_Xu"><i class="ai ai-researchgate" title="Research Gate"></i></a> -->
+      function update_isotope() {
+        // Retrieve cached button click.
+        var defaultFilterValue = localStorage.getItem('filterValue');
+        if (defaultFilterValue == null) {
+          defaultFilterValue = ".highlight"
+        }
+        $grid.isotope({ filter: defaultFilterValue });
+        var buttons = document.getElementsByClassName("button");
+        for (var currButton of buttons) {
+          if (currButton.getAttribute('data-filter') == defaultFilterValue) {
+            currButton.classList.add('is-checked');
+          } else {
+            currButton.classList.remove('is-checked');
+          }
+        }
+      }
 
-               <!-- Visit LinkedIn.net to set up an account  -->
-               <a class="btn btn-primary btn-lg" href="https://www.linkedin.com/in/yuhai-wang/"><i class="fa fa-linkedin" title="LinkedIn"></i></a>
+      function toggle_bio() {
+        var x = document.getElementById("more-bio");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+      }
 
+      function toggle_highlights() {
+        var x = document.getElementById("main-highlights");
+        var y = document.getElementById("more-highlights");
+        var b = document.getElementById("toggle_highlights_button")
+        if (y.style.display === "none") {
+          x.style.display = "none";
+          y.style.display = "block";
+          b.innerHTML = "Show less"
+          update_isotope();
+        } else {
+          x.style.display = "block";
+          y.style.display = "none";
+          b.innerHTML = "Show more"
+          update_isotope();
+        }
+      }
 
-            </div>
+      update_isotope();
 
-        </div>
-        <!-- .row -->
-   </footer>
-
-
-   <!-- This in the include to style code, if you put a code snippet into your website, for instructions, see: https://github.com/google/code-prettify -->
-   <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
-
-</body>
-
+    </script>
+  </body>
 </html>

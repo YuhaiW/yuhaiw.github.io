@@ -19,6 +19,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
     <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
 
     <!-- Custom Style -->
     <link rel="stylesheet" href="style.css">
@@ -690,6 +691,24 @@
       }
 
       update_isotope();
+
+      // Relayout the grid once thumbnails finish loading, otherwise Isotope
+      // measures item heights before images/videos have loaded and the gaps
+      // between projects come out inconsistent (varying on each refresh).
+      imagesLoaded('.grid', function() {
+        $grid.isotope('layout');
+      });
+
+      // imagesLoaded doesn't track <video> elements, so relayout when their
+      // dimensions become known and again once everything has loaded.
+      document.querySelectorAll('.grid video').forEach(function(video) {
+        video.addEventListener('loadedmetadata', function() {
+          $grid.isotope('layout');
+        });
+      });
+      window.addEventListener('load', function() {
+        $grid.isotope('layout');
+      });
 
     </script>
   </body>

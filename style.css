@@ -46,6 +46,10 @@ table {
 
 /**************************************************/
 
+::selection {
+  background: rgba(217, 119, 87, 0.5);
+}
+
 #body{
   background-color: #FDF9F4;
   font-family: 'Asap', roboto, sans-serif;
